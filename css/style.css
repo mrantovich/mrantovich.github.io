@@ -149,7 +149,6 @@ h6 {
 
 html,
 body {
-  height: 100%;
   font-family: "Playfair Display", serif;
 }
 
@@ -780,6 +779,12 @@ body {
 }
 
 @media (max-width: 921px) {
+  body.lock {
+    overflow: hidden;
+    height: 100%;
+    margin: 0;
+  }
+
   .header {
     height: 60px;
   }
