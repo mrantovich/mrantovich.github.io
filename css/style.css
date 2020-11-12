@@ -634,6 +634,14 @@ body {
   padding-bottom: 20px;
 }
 
+.span-b {
+  font-weight: 700;
+}
+
+.span-i {
+  font-style: italic;
+}
+
 .footer {
   background-color: #878787;
   width: 100%;
