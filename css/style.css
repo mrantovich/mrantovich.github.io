@@ -103,7 +103,6 @@ h6 {
   font-size: 24px;
   font-family: "PT Sans", sans-serif;
   line-height: 32px;
-  text-align: justify;
 }
 
 .prose__list,
@@ -715,10 +714,13 @@ body {
   color: #fff;
 }
 
-.footer__social-item a:hover i {
+.footer__social-item a i {
   -webkit-transition: all 0.1s ease-in;
   -o-transition: all 0.1s ease-in;
   transition: all 0.1s ease-in;
+}
+
+.footer__social-item a:hover i {
   -webkit-transform: scale(1.3);
       -ms-transform: scale(1.3);
           transform: scale(1.3);
