@@ -35,6 +35,7 @@ $(window).scroll(function(){
 	var year2020point = $('#year2020').offset().top;
 	var year2019point = $('#year2019').offset().top;
 	var year2018point = $('#year2018').offset().top;
+	var year2017point = $('#year2017').offset().top;
 
 	if ($(window).scrollTop() >= year2020point) {
 		$('.table-of-contents__item').removeClass('table-of-contents__item_current');
@@ -49,6 +50,11 @@ $(window).scroll(function(){
 	if ($(window).scrollTop() >= year2018point) {
 		$('.table-of-contents__item').removeClass('table-of-contents__item_current');
 		$('#toc-year2018').addClass('table-of-contents__item_current');
+	};
+
+	if ($(window).scrollTop() >= year2017point) {
+		$('.table-of-contents__item').removeClass('table-of-contents__item_current');
+		$('#toc-year2017').addClass('table-of-contents__item_current');
 	};
 
 });
