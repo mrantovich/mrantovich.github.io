@@ -103,6 +103,9 @@ h6 {
   font-size: 24px;
   font-family: "PT Sans", sans-serif;
   line-height: 32px;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
 }
 
 .prose__list,
@@ -982,7 +985,7 @@ body {
 @media (max-width: 652px) {
   .prose__item,
   .criticism__item {
-    font-size: 18px;
+    font-size: 16px;
     line-height: 26px;
   }
 
@@ -995,7 +998,7 @@ body {
 @media (max-width: 452px) {
   .prose__item,
   .criticism__item {
-    font-size: 20px;
+    font-size: 18px;
     line-height: 28px;
   }
 
