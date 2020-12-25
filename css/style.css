@@ -87,6 +87,7 @@ h6 {
 }
 
 .prose,
+.about,
 .criticism {
   padding: 0 0 0 30%;
   display: -webkit-box;
@@ -98,6 +99,7 @@ h6 {
 }
 
 .prose__item,
+.about__item,
 .criticism__item {
   padding: 0 0 60px 0;
   font-size: 24px;
@@ -109,16 +111,19 @@ h6 {
 }
 
 .prose__list,
+.about__list,
 .criticism__list {
   font-family: 'PT Sans', sans-serif;
 }
 
 .prose__list li,
+.about__list li,
 .criticism__list li {
   margin: 15px 0;
 }
 
 .prose__link,
+.about__link,
 .criticism__link {
   -webkit-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
@@ -129,11 +134,13 @@ h6 {
 }
 
 .prose__link:hover,
+.about__link:hover,
 .criticism__link:hover {
   color: #373737;
 }
 
 .prose__title,
+.about__title,
 .criticism__title {
   font-size: 28px;
   font-weight: 700;
@@ -142,6 +149,7 @@ h6 {
 }
 
 .prose__subtitle,
+.about__subtitle,
 .criticism__subtitle {
   font-size: 20px;
   font-style: italic;
@@ -514,6 +522,11 @@ body {
   max-width: 100%;
 }
 
+.readarea__about {
+  min-width: 50%;
+  max-width: 100%;
+}
+
 .table-of-contents {
   width: auto;
 }
@@ -618,6 +631,43 @@ body {
 
 .prose__body p {
   white-space: pre-line;
+}
+
+.about__list {
+  counter-reset: li;
+  list-style: none;
+}
+
+.about__list li {
+  margin: 0;
+  counter-increment: li;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.about__list li::before {
+  content: counter(li);
+  color: #878787;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.about__list li:hover::before {
+  color: #373737;
+}
+
+.about__body p {
+  white-space: pre-line;
+}
+
+.about__type {
+  display: block;
+  margin: 0;
+  padding: 0;
+  font-style: italic;
+  text-align: center;
 }
 
 .criticism__list li {
@@ -733,6 +783,14 @@ body {
   padding: 5px 0 0 0;
 }
 
+.footer__about {
+  color: #fff;
+}
+
+.footer__about:hover {
+  text-decoration: underline;
+}
+
 @media (min-width: 767px) {
   .header__menu-item:hover a {
     color: #373737;
@@ -758,6 +816,11 @@ body {
   }
 
   .prose {
+    padding: 0 0 0 20%;
+    margin: 0 auto;
+  }
+
+  .about {
     padding: 0 0 0 20%;
     margin: 0 auto;
   }
@@ -909,6 +972,11 @@ body {
     margin: 0 auto;
   }
 
+  .about {
+    padding: 0;
+    margin: 0 auto;
+  }
+
   .criticism {
     padding: 0;
     margin: 0 auto;
@@ -922,16 +990,19 @@ body {
 
 @media (max-width: 767px) {
   .prose__item,
+  .about__item,
   .criticism__item {
     padding: 0 0 60px 0;
   }
 
   .prose__link:hover,
+  .about__link:hover,
   .criticism__link:hover {
     color: #878787;
   }
 
   .prose__link,
+  .about__link,
   .criticism__link {
     font-size: 22px;
   }
@@ -962,6 +1033,14 @@ body {
             transform: none;
   }
 
+  .about__list li {
+    margin-bottom: 5px;
+  }
+
+  .about__link {
+    font-size: 18px;
+  }
+
   .footer {
     height: 240px;
   }
@@ -984,6 +1063,7 @@ body {
 
 @media (max-width: 652px) {
   .prose__item,
+  .about__item,
   .criticism__item {
     font-size: 16px;
     line-height: 26px;
@@ -997,12 +1077,14 @@ body {
 
 @media (max-width: 452px) {
   .prose__item,
+  .about__item,
   .criticism__item {
     font-size: 18px;
     line-height: 28px;
   }
 
   .prose__list,
+  .about__list,
   .criticism__list {
     text-align: center;
   }
@@ -1018,6 +1100,10 @@ body {
 
   .poem__item:last-child {
     padding-bottom: 0;
+  }
+
+  .about__list {
+    text-align: left;
   }
 }
 
