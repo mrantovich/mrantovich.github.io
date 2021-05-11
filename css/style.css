@@ -794,6 +794,9 @@ body {
 }
 
 .footer__social-item a {
+  display: block;
+  width: 100%;
+  height: 100%;
   color: #fff;
 }
 
