@@ -32,11 +32,17 @@ $(document).ready(function(){
 
 $(window).scroll(function(){
 
+	var year2022point = $('#year2022').offset().top;
 	var year2021point = $('#year2021').offset().top;
 	var year2020point = $('#year2020').offset().top;
 	var year2019point = $('#year2019').offset().top;
 	var year2018point = $('#year2018').offset().top;
 	var year2017point = $('#year2017').offset().top;
+
+	if ($(window).scrollTop() >= year2022point) {
+		$('.table-of-contents__item').removeClass('table-of-contents__item_current');
+		$('#toc-year2022').addClass('table-of-contents__item_current');
+	};
 
 	if ($(window).scrollTop() >= year2021point) {
 		$('.table-of-contents__item').removeClass('table-of-contents__item_current');
